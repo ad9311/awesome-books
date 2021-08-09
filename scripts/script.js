@@ -1,26 +1,16 @@
 let books = [];
-
-function Book(author, title) {
-  this.author = author;
-  this.title = title;
-}
-
 function addBooks() {
   let author = document.getElementById('author');
   let title = document.getElementById('title');
   let li = document.createElement('li');
-
-  let id = `${author.value}_${title.value}`.toLowerCase();
-
+  let currentDate = new Date();
+  let time = (currentDate.getSeconds() + currentDate.getMilliseconds()) * 2;
+  let id = 'book' + time;
   li.id = id;
-  li.innerHTML = `<p>${author.value} - ${title.value}</p><input type="button" value="Remove" onclick="removeBooks(${id})">`;
-
-  books.push(new Book(author.value, title.value));
-  document.getElementById('books').appendChild(li); 
+  li.innerHTML = `<p>${author.value} - ${title.value}</p><input type="button" value="Remove" onclick="removeBooks(${id})"> <hr>`;
+  books.push(id);
+  document.getElementById('books').appendChild(li);
 }
-
 function removeBooks(id) {
-  const bookIndex = books.findIndex((book) => book.id === id);
-  books.splice(bookIndex, 1);
-  //document.getElementById().remove();
+  document.getElementById(id.id).remove();
 }
