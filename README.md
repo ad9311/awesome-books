@@ -25,8 +25,9 @@ Awesome Books is a basic website that allows users to add/remove books from a li
 
 👤 Angel 
 
-- GitHub: [](https://github.com/)
-- Twitter: [](https://twitter.com/)
+- GitHub: [@ad9311](https://github.com/ad9311)
+- Twitter: [@adiaz9311](https://twitter.com/adiaz9311)
+- LinkedIn: [Ángel Díaz](https://www.linkedin.com/in/ad9311/)
 
 👤 Chibuike Uzoechina
 
