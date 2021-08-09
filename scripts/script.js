@@ -20,5 +20,7 @@ function addBooks() {
 }
 
 function removeBooks(id) {
-  document.getElementById().remove();
+  const bookIndex = books.findIndex((book) => book.id === id);
+  books.splice(bookIndex, 1);
+  //document.getElementById().remove();
 }
