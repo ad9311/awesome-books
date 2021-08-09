@@ -12,5 +12,7 @@ function addBooks() {
   document.getElementById('books').appendChild(li);
 }
 function removeBooks(id) {
+  let index = books.indexOf(id.id);
+  books.splice(index, 1);
   document.getElementById(id.id).remove();
 }
