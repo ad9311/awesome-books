@@ -2,7 +2,6 @@
 
 Awesome Books is a basic website that allows users to add/remove books from a list. It provide interface for adding book, and for visualizing the list of added books. This is achieved using plain HTML, JavaScript objects, arrays, DOM, and basic events.
 
-
 ## Built With
 
 - HTML
@@ -23,7 +22,7 @@ Awesome Books is a basic website that allows users to add/remove books from a li
 - run `index.html`
 ## Authors
 
-👤 Angel 
+👤 Ángel Díaz
 
 - GitHub: [@ad9311](https://github.com/ad9311)
 - Twitter: [@adiaz9311](https://twitter.com/adiaz9311)
