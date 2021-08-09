@@ -18,8 +18,8 @@ Awesome Books is a basic website that allows users to add/remove books from a li
 ### Setup: How to start the TicTacToe game
 
 - clone our repo: `https://github.com/Chike1990/Awesome_books`
-- cd into: `cd index.html`
-- run `index.html`
+- cd into: `cd awesome-books`
+- run `index.html` with your favorite browser
 ## Authors
 
 👤 Ángel Díaz
