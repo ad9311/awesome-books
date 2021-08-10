@@ -1,18 +1,43 @@
-let books = [];
+/* eslint-disable max-classes-per-file, no-unused-vars */
+class BookCollection {
+  constructor() {
+    this.books = [];
+  }
+
+  saveBook(book) {
+    this.books.push(book);
+  }
+
+  removeBook(removedBook) {
+    const newCollection = this.books.filter((book) => book.id !== removedBook.id);
+    this.books = newCollection;
+    return newCollection;
+  }
+}
+
+class Book {
+  constructor(author, title, id) {
+    this.author = author;
+    this.title = title;
+    this.id = id;
+  }
+}
+
+const bookCollection = new BookCollection();
 
 function updateLocalStorage() {
-  localStorage.setItem('books', JSON.stringify(books));
+  localStorage.setItem('books', JSON.stringify(bookCollection.books));
 }
 
 function loadLocalStorage() {
   if (localStorage.getItem('books')) {
-    books = JSON.parse(localStorage.getItem('books'));
+    bookCollection.books = JSON.parse(localStorage.getItem('books'));
   }
 }
 
 function renderBooks() {
   loadLocalStorage();
-  books.forEach((book) => {
+  bookCollection.books.forEach((book) => {
     const { author } = book;
     const { title } = book;
     const { id } = book;
@@ -23,9 +48,7 @@ function renderBooks() {
   });
 }
 
-/* eslint-disable */
 function addBooks() {
-  /* eslint-enable */
   const author = document.getElementById('author');
   const title = document.getElementById('title');
   const li = document.createElement('li');
@@ -34,22 +57,19 @@ function addBooks() {
   const id = `book${time}`;
   li.id = id;
   li.innerHTML = `<p>${author.value} - ${title.value}</p><input type="button" value="Remove" onclick="removeBooks(${id})"></hr>`;
-  const book = { author: author.value, title: title.value, id };
-  books.push(book);
+  const book = new Book(author.value, title.value, id);
+  bookCollection.saveBook(book);
   updateLocalStorage();
   document.getElementById('books').appendChild(li);
-  /* eslint-disable */
 }
 
 function removeBooks(object) {
-  /* eslint-enable */
-  books = books.filter((book) => book.id !== object.id);
+  bookCollection.removeBook(object);
   updateLocalStorage();
   document.getElementById(object.id).remove();
-  /* eslint-disable */
 }
-/* eslint-enable */
 
 window.addEventListener('load', () => {
   renderBooks();
 });
+/* eslint-enable */
