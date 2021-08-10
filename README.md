@@ -15,7 +15,7 @@ Awesome Books is a basic website that allows users to add/remove books from a li
 - Git
 - JavaScript
 
-### Setup: How to start the TicTacToe game
+### Setup: Getting Started with Awesome Books App
 
 - clone our repo: `https://github.com/Chike1990/Awesome_books`
 - cd into: `cd awesome-books`

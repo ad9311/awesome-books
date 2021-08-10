@@ -1,4 +1,9 @@
-const books = [];
+let books = [];
+
+function updateLocalStorage() {
+  localStorage.setItem('books', JSON.stringify(books));
+}
+
 /* eslint-disable */
 function addBooks() {
   /* eslint-enable */
@@ -9,16 +14,19 @@ function addBooks() {
   const time = (currentDate.getSeconds() + currentDate.getMilliseconds()) * 2;
   const id = `book${time}`;
   li.id = id;
-  li.innerHTML = `<p>${author.value} - ${title.value}</p><input type="button" value="Remove" onclick="removeBooks(${id})"> <hr>`;
-  books.push(id);
+  li.innerHTML = `<p>${author.value} - ${title.value}</p><input type="button" value="Remove" onclick="removeBooks(${id})"></hr>`;
+  const book = { author: author.value, title: title.value, id };
+  books.push(book);
+  updateLocalStorage();
   document.getElementById('books').appendChild(li);
   /* eslint-disable */
 }
-function removeBooks(id) {
+
+function removeBooks(object) {
   /* eslint-enable */
-  const index = books.indexOf(id.id);
-  books.splice(index, 1);
-  document.getElementById(id.id).remove();
+  books = books.filter((book) => book.id !== object.id);
+  updateLocalStorage();
+  document.getElementById(object.id).remove();
   /* eslint-disable */
 }
 /* eslint-enable */
