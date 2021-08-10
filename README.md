@@ -1,65 +1,44 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# Awesome Books App
 
-# Project Name
-
-> One paragraph statement about the project.
-
-![screenshot](./app_screenshot.png)
-
-Additional description about the project and its features.
+Awesome Books is a basic website that allows users to add/remove books from a list. It provide interface for adding book, and for visualizing the list of added books. This is achieved using plain HTML, JavaScript objects, arrays, DOM, and basic events.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo
-
-[Live Demo Link](https://livedemo.com)
-
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
+- HTML
+- JavaScript
+- Git flow
+- GitHub
 
 ### Prerequisites
 
-### Setup
+- Terminal (Bash)
+- Git
+- JavaScript
 
-### Install
+### Setup: Getting Started with Awesome Books App
 
-### Usage
-
-### Run tests
-
-### Deployment
-
-
-
+- clone our repo: `https://github.com/Chike1990/Awesome_books`
+- cd into: `cd awesome-books`
+- run `index.html` with your favorite browser
 ## Authors
 
-👤 **Author1**
+👤 Ángel Díaz
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@ad9311](https://github.com/ad9311)
+- Twitter: [@adiaz9311](https://twitter.com/adiaz9311)
+- LinkedIn: [Ángel Díaz](https://www.linkedin.com/in/ad9311/)
 
-👤 **Author2**
+👤 Chibuike Uzoechina
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Chike1990](https://github.com/Chike1990)
+- Twitter: [@ChibuikeUzoechi](https://twitter.com/ChibuikeUzoechi)
+- LinkedIn: [@Chibuike-Uzoechina](https://www.linkedin.com/in/chibuike-uzoechina-630857102)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page]
 
 ## Show your support
 
@@ -67,10 +46,10 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Many thanks to Microverse
+- friends
+- our standup team
 
 ## 📝 License
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](LICENSE) Licensed.
