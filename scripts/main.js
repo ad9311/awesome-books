@@ -43,7 +43,7 @@ function renderBooks() {
     const { id } = book;
     const li = document.createElement('li');
     li.id = id;
-    li.className = 'd-flex justify-content-between py-1';
+    li.className = 'd-flex justify-content-between py-1 form-label';
     li.innerHTML = `<p>"${title}" by ${author} </p><input type="button" value="Remove" onclick="removeBooks(${id})"></hr>`;
     document.getElementById('books').appendChild(li);
   });
@@ -57,7 +57,7 @@ function addBooks() {
   const time = (currentDate.getSeconds() + currentDate.getMilliseconds()) * 2;
   const id = `book${time}`;
   li.id = id;
-  li.className = 'd-flex justify-content-between py-1';
+  li.className = 'd-flex justify-content-between py-1 form-label';
   li.innerHTML = `<p>"${title.value}" by ${author.value} </p><input type="button" value="Remove" onclick="removeBooks(${id})"></hr>`;
   const book = new Book(author.value, title.value, id);
   bookCollection.saveBook(book);
