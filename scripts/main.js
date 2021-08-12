@@ -81,6 +81,8 @@ function displayList() {
   list.className = 'd-block'
   const addNew = document.getElementById('section-new');
   addNew.className = 'd-none'
+  const contactInfo = document.getElementById('contact-infor');
+  contactInfo.className = 'd-none'
 }
 
 function displayAddNew() {
@@ -88,6 +90,17 @@ function displayAddNew() {
   list.className = 'd-none'
   const addNew = document.getElementById('section-new');
   addNew.className = 'd-block book-form py-4'
+  const contactInfo = document.getElementById('contact-infor');
+  contactInfo.className = 'd-none'
+}
+
+function displayContact() {
+  const contactInfo = document.getElementById('contact-infor');
+  contactInfo.className = 'd-block'
+  const addNew = document.getElementById('section-new');
+  addNew.className = 'd-none book-form py-4'
+  const list = document.getElementById('section-list');
+  list.className = 'd-none'
 }
 
 window.addEventListener('load', () => {
@@ -104,5 +117,9 @@ document.getElementById('list').addEventListener('click', () => {
 
 document.getElementById('new').addEventListener('click', () => {
   displayAddNew();
+});
+
+document.getElementById('contact').addEventListener('click', () => {
+  displayContact();
 });
 /* eslint-enable */

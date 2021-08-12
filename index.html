@@ -1,54 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">    
-    <link rel="stylesheet" href="./styles/styles.css">
-    <title>Document</title>
-  </head>
-  <body>
-    <nav class=" nav d-flex justify-content-between container-md border border-dark mt-3 py-2 align-items-center">
-      <p class="px-3 m-0">Awesome Books</p>
-      <ul class="nav-list d-flex justify-content-between m-0">
-        <li><a id="list" class="text-decoration-none px-2">List </a> |</li>
-        <li class="bg-transparent"><a id="new" class="text-decoration-none px-2">Add new </a> |</li>
-        <li><a class="text-decoration-none px-2">Contact </a></li>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <nav class=" nav d-flex justify-content-between container-md border border-dark mt-3 py-2 align-items-center">
+    <p class="px-3 m-0">Awesome Books</p>
+    <ul class="nav-list d-flex justify-content-between m-0">
+      <li><a id="list" class="text-decoration-none px-2">List </a> |</li>
+      <li class="bg-transparent"><a id="new" class="text-decoration-none px-2">Add new </a> |</li>
+      <li><a class="text-decoration-none px-2" id="contact">Contact </a></li>
+    </ul>
+  </nav>
+  <div class="container-md d-flex flex-row-reverse py-1">
+    <p id="date" class=""></p>
+  </div>
+  <main>
+    <section id="section-list" class="py-4">
+      <h1 class="text-center">All Awesome Books</h1>
+      <div class="book-list">
+        <ul id="books" class="p-0">
+        </ul>
+      </div>
+    </section>
+    <section id="section-new" class="book-form py-4 d-none">
+      <h1 class="text-center">Add a new book</h1>
+      <form>
+        <ul>
+          <li class="pt-2 bg-transparent">
+            <input class="form-control" id="title" type="text" placeholder="Title">
+          </li>
+          <br>
+          <li>
+            <input class="form-control" id="author" type="text" placeholder="Author">
+          </li>
+          <li class="d-flex justify-content-end bg-transparent">
+            <input class="my-2" type="button" value="Add" onclick="addBooks()">
+          </li>
+        </ul>
+      </form>
+    </section>
+
+    <section id="contact-infor" class="d-none">
+      <h2 class="">Contact information</h2>
+      <p class="">
+        Do you have any questions or do you just want to say "Hello"? You can
+        reach out to us.
+      </p>
+      <ul class="contact__info">
+        <li class="email">Our email: </li>
+        <li class="bg-transparent">Our phone number: +573007424697; +2348164212855</li>
+        <li class="address">Our address:Remote</li>
       </ul>
-    </nav>
-    <div class="container-md d-flex flex-row-reverse py-1">
-      <p id="date" class=""></p>
-    </div>
-    <main>
-      <section id="section-list" class="py-4">
-        <h1 class="text-center">All Awesome Books</h1>
-        <div class="book-list">
-          <ul id="books" class="p-0">
-          </ul>
-        </div>
-      </section>
-      <section id="section-new" class="book-form py-4 d-none">
-        <h1 class="text-center">Add a new book</h1>
-        <form>
-          <ul>
-            <li class="pt-2 bg-transparent">
-              <input class="form-control" id="title" type="text" placeholder="Title">
-            </li>
-            <br>
-            <li>
-              <input class="form-control" id="author" type="text" placeholder="Author">
-            </li>
-            <li class="d-flex justify-content-end bg-transparent">
-              <input class= "my-2" type="button" value="Add" onclick="addBooks()">
-            </li>
-          </ul>
-        </form>
-      </section>
-    </main>
-    <footer class="border border-dark mt-3 py-2 position-absolute w-100 bottom-0 text-start">
-      <p class="m-0 px-4">Copyright ©. Chibuike Uzoechina - Ángel Díaz</p>
-    </footer>
-    <script src="./scripts/main.js" type="text/javascript"></script>
-  </body>
+    </section>
+  </main>
+  <footer class="border border-dark mt-3 py-2 position-absolute w-100 bottom-0 text-start">
+    <p class="m-0 px-4">Copyright ©. Chibuike Uzoechina - Ángel Díaz</p>
+  </footer>
+  <script src="./scripts/main.js" type="text/javascript"></script>
+</body>
+
 </html>
