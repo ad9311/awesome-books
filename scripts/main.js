@@ -71,7 +71,38 @@ function removeBooks(object) {
   document.getElementById(object.id).remove();
 }
 
+function displayDate(){
+  const date = new Date();
+  document.getElementById('date').innerHTML = date.toDateString() + ', ' + date.toLocaleTimeString();
+}
+
+function displayList() {
+  const list = document.getElementById('section-list');
+  list.className = 'd-block'
+  const addNew = document.getElementById('section-new');
+  addNew.className = 'd-none'
+}
+
+function displayAddNew() {
+  const list = document.getElementById('section-list');
+  list.className = 'd-none'
+  const addNew = document.getElementById('section-new');
+  addNew.className = 'd-block book-form py-4'
+}
+
 window.addEventListener('load', () => {
   renderBooks();
+});
+
+window.addEventListener('load', () => {
+  displayDate();
+});
+
+document.getElementById('list').addEventListener('click', () => {
+  displayList();
+});
+
+document.getElementById('new').addEventListener('click', () => {
+  displayAddNew();
 });
 /* eslint-enable */

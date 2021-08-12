@@ -33,3 +33,8 @@ li:nth-child(even) {
   margin: auto;
   max-width: 450px;
 }
+
+a {
+  color: inherit;
+  cursor: pointer;
+}
