@@ -38,3 +38,13 @@ a {
   color: inherit;
   cursor: pointer;
 }
+
+.list-decoration {
+  list-style: disc;
+}
+
+.contact-div {
+  margin: auto;
+  max-width: 600px;
+  text-align: left;
+}

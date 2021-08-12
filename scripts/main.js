@@ -71,45 +71,45 @@ function removeBooks(object) {
   document.getElementById(object.id).remove();
 }
 
-function displayDate(){
-  const date = new Date();
-  document.getElementById('date').innerHTML = date.toDateString() + ', ' + date.toLocaleTimeString();
-}
+// function displayDate(){
+//   const date = new Date();
+//   document.getElementById('date').innerHTML = date.toDateString() + ', ' + date.toLocaleTimeString();
+// }
 
 function displayList() {
   const list = document.getElementById('section-list');
-  list.className = 'd-block'
+  list.className = 'd-block py-4'
   const addNew = document.getElementById('section-new');
   addNew.className = 'd-none'
   const contactInfo = document.getElementById('contact-infor');
-  contactInfo.className = 'd-none'
+  contactInfo.className = 'd-none '
 }
 
 function displayAddNew() {
   const list = document.getElementById('section-list');
-  list.className = 'd-none'
+  list.className = 'd-none py-4'
   const addNew = document.getElementById('section-new');
   addNew.className = 'd-block book-form py-4'
   const contactInfo = document.getElementById('contact-infor');
-  contactInfo.className = 'd-none'
+  contactInfo.className = 'd-none py-4'
 }
 
 function displayContact() {
   const contactInfo = document.getElementById('contact-infor');
-  contactInfo.className = 'd-block'
+  contactInfo.className = 'd-block py-4'
   const addNew = document.getElementById('section-new');
   addNew.className = 'd-none book-form py-4'
   const list = document.getElementById('section-list');
-  list.className = 'd-none'
+  list.className = 'd-none py-4'
 }
 
 window.addEventListener('load', () => {
   renderBooks();
 });
 
-window.addEventListener('load', () => {
-  displayDate();
-});
+// window.addEventListener('load', () => {
+//   displayDate();
+// });
 
 document.getElementById('list').addEventListener('click', () => {
   displayList();
