@@ -74,4 +74,5 @@ function removeBooks(object) {
 window.addEventListener('load', () => {
   renderBooks();
 });
+
 /* eslint-enable */
