@@ -72,17 +72,15 @@ function removeBooks(object) {
 }
 
 function changeLinks(id) {
-  if (id == 'list') {
+  if (id === 'list') {
     document.getElementById('list').className = 'selected-link';
     document.getElementById('new').className = 'unselected-link';
     document.getElementById('contact').className = 'unselected-link';
-  }
-  else if (id == 'new') {
+  } else if (id === 'new') {
     document.getElementById('list').className = 'unselected-link';
     document.getElementById('new').className = 'selected-link';
     document.getElementById('contact').className = 'unselected-link';
-  }
-  else {
+  } else {
     document.getElementById('list').className = 'unselected-link';
     document.getElementById('new').className = 'unselected-link';
     document.getElementById('contact').className = 'selected-link';
