@@ -71,7 +71,26 @@ function removeBooks(object) {
   document.getElementById(object.id).remove();
 }
 
+function changeLinks(id) {
+  if (id == 'list') {
+    document.getElementById('list').className = 'selected-link';
+    document.getElementById('new').className = 'unselected-link';
+    document.getElementById('contact').className = 'unselected-link';
+  }
+  else if (id == 'new') {
+    document.getElementById('list').className = 'unselected-link';
+    document.getElementById('new').className = 'selected-link';
+    document.getElementById('contact').className = 'unselected-link';
+  }
+  else {
+    document.getElementById('list').className = 'unselected-link';
+    document.getElementById('new').className = 'unselected-link';
+    document.getElementById('contact').className = 'selected-link';
+  }
+}
+
 function displayList() {
+  changeLinks('list');
   const list = document.getElementById('section-list');
   list.className = 'd-block py-4';
   const addNew = document.getElementById('section-new');
@@ -81,6 +100,7 @@ function displayList() {
 }
 
 function displayAddNew() {
+  changeLinks('new');
   const list = document.getElementById('section-list');
   list.className = 'd-none py-4';
   const addNew = document.getElementById('section-new');
@@ -90,6 +110,7 @@ function displayAddNew() {
 }
 
 function displayContact() {
+  changeLinks('contact');
   const contactInfo = document.getElementById('contact-infor');
   contactInfo.className = 'd-block py-4';
   const addNew = document.getElementById('section-new');
